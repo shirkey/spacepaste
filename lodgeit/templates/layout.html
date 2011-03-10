@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
-    <title>{{ page_title|e }} | LodgeIt!</title>
+    <title>{{ page_title|e }} | Spacepaste!</title>
     <link rel="stylesheet" href="/static/style.css" type="text/css">
     <link rel="stylesheet" href="/static/print.css" type="text/css" media="print">
     <script type="text/javascript" src="/static/jquery.js"></script>
@@ -17,7 +17,7 @@
   </head>
   <body>
     <div class="page">
-      <div id="header"><h1>Lodge It</h1></div>
+      <div id="header"><h1>Spacepaste</h1></div>
       <ul id="navigation">
       {%- for href, id, caption in [
         ('/', 'new', _('New')),
@@ -58,7 +58,7 @@
           <div class="notification">
             <h3>{% trans %}Welcome On LodgeIt{% endtrans %}</h3>
             <p>{%- trans -%}
-              Welcome to the LodgeIt pastebin. In order to use the notification feature
+              Welcome to the Spacepaste pastebin. In order to use the notification feature
               a 31 day cookie with an unique ID was created for you. The lodgeit database
               does not store any information about you, it's just used for an advanced
               pastebin experience :-). Read more on the <a href="/about/#privacy">about
