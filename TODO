@@ -6,6 +6,8 @@ SPACEPASTE TODO
   * Remove the usage of securecookie
   * Store pygmentized source code in the database
   * Apply the patch Andreas wrote for replying to private pastes
+  * Add removal urls the way imgur.com does them (a private deletion url shown when a paste is completed).
+  * Add a form for paste removal requests which emails the site administrator.
 
 LODGEIT TODO
 ------------
