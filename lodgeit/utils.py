@@ -31,7 +31,7 @@ except:
 
 #: Jinja2 Environment for our template handling
 jinja_environment = Environment(loader=FileSystemLoader(
-    path.join(path.dirname(__file__), 'views')),
+    path.join(path.dirname(__file__), 'templates')),
     extensions=['jinja2.ext.i18n'])
 
 #: constants
