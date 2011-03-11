@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    lodgeit.lib.compilerparser
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    spacepaste.lib.compilerparser
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     This module implements parsers for compiler error messages.
 

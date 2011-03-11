@@ -2,11 +2,11 @@
 
 from werkzeug import script, create_environ, run_wsgi_app
 
-from lodgeit import local
-from lodgeit.application import make_app
-from lodgeit.database import db
+from spacepaste import local
+from spacepaste.application import make_app
+from spacepaste.database import db
 
-dburi = 'sqlite:////tmp/lodgeit.db'
+dburi = 'sqlite:////tmp/spacepaste.db'
 
 SECRET_KEY = 'no secret key'
 
@@ -26,7 +26,7 @@ action_shell = script.make_shell(
         'db': db,
         'run_app': run_app
     },
-    ('\nWelcome to the interactive shell environment of LodgeIt!\n'
+    ('\nWelcome to the interactive shell environment of spacepaste!\n'
      '\n'
      'You can use the following predefined objects: app, local, db.\n'
      'To run the application (creates a request) use *run_app*.')

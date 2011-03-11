@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    lodgeit.database
-    ~~~~~~~~~~~~~~~~
+    spacepaste.database
+    ~~~~~~~~~~~~~~~~~~~
 
     Database fun :)
 
@@ -14,7 +14,7 @@ import sqlalchemy
 from sqlalchemy import MetaData
 from sqlalchemy import orm
 from sqlalchemy.ext.declarative import declarative_base
-from lodgeit.local import application, _local_manager
+from spacepaste.local import application, _local_manager
 
 
 metadata = MetaData()
@@ -55,4 +55,4 @@ def _make_module():
     db.NoResultFound = orm.exc.NoResultFound
     return db
 
-sys.modules['lodgeit.database.db'] = db = _make_module()
+sys.modules['spacepaste.database.db'] = db = _make_module()

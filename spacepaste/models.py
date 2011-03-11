@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    lodgeit.models
-    ~~~~~~~~~~~~~~
+    spacepaste.models
+    ~~~~~~~~~~~~~~~~~
 
     Our database models.
 
@@ -13,11 +13,11 @@ import difflib
 from datetime import datetime
 from werkzeug import cached_property
 
-from lodgeit import local
-from lodgeit.utils import generate_paste_hash
-from lodgeit.lib.highlighting import highlight, preview_highlight, LANGUAGES
-from lodgeit.lib.diff import prepare_udiff
-from lodgeit.database import db
+from spacepaste import local
+from spacepaste.utils import generate_paste_hash
+from spacepaste.lib.highlighting import highlight, preview_highlight, LANGUAGES
+from spacepaste.lib.diff import prepare_udiff
+from spacepaste.database import db
 
 
 class Paste(db.Model):

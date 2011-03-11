@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-    lodgeit.utils
-    ~~~~~~~~~~~~~
+    spacepaste.utils
+    ~~~~~~~~~~~~~~~~
 
-    Serveral utilities used by LodgeIt.
+    Serveral utilities used by spacepaste.
 
     :copyright: 2007-2008 by Christopher Grebs.
     :license: BSD
@@ -21,8 +21,8 @@ from jinja2 import Environment, FileSystemLoader
 
 from babel import Locale
 
-from lodgeit import local
-from lodgeit.i18n import get_translations
+from spacepaste import local
+from spacepaste.i18n import get_translations
 
 try:
     from hashlib import sha1
@@ -36,7 +36,7 @@ jinja_environment = Environment(loader=FileSystemLoader(
 
 #: constants
 _word_only = partial(re.compile(r'[^a-zA-Z0-9]').sub, '')
-COOKIE_NAME = u'lodgeit_session'
+COOKIE_NAME = u'spacepaste_session'
 
 
 def generate_user_hash():
@@ -108,7 +108,7 @@ def render_to_response(template_name, **context):
     adds the current request to the context. This is used for the
     welcome message.
     """
-    from lodgeit.models import Paste
+    from spacepaste.models import Paste
     request = local.request
     if request.method == 'GET':
         context['new_replies'] = Paste.fetch_replies()

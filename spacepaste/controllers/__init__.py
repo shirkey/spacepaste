@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    lodgeit.controllers
-    ~~~~~~~~~~~~~~~~~~~
+    spacepaste.controllers
+    ~~~~~~~~~~~~~~~~~~~~~~
 
     Module that helds the controllers
 
@@ -11,6 +11,6 @@
 
 def get_controller(name):
     cname, hname = name.split('/')
-    module = __import__('lodgeit.controllers.' + cname, None, None, [''])
+    module = __import__('spacepaste.controllers.' + cname, None, None, [''])
     controller = module.controller()
     return getattr(controller, hname)

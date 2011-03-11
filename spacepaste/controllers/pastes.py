@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    lodgeit.controllers.pastes
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    spacepaste.controllers.pastes
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     The paste controller
 
@@ -10,15 +10,15 @@
 """
 from werkzeug import redirect, Response
 from werkzeug.exceptions import NotFound
-from lodgeit import local
-from lodgeit.lib import antispam
-from lodgeit.i18n import list_languages as i18n_list_languages, _
-from lodgeit.utils import render_to_response
-from lodgeit.models import Paste
-from lodgeit.database import db
-from lodgeit.lib.highlighting import list_languages, STYLES, get_style
-from lodgeit.lib.pagination import generate_pagination
-from lodgeit.lib.captcha import check_hashed_solution, Captcha
+from spacepaste import local
+from spacepaste.lib import antispam
+from spacepaste.i18n import list_languages as i18n_list_languages, _
+from spacepaste.utils import render_to_response
+from spacepaste.models import Paste
+from spacepaste.database import db
+from spacepaste.lib.highlighting import list_languages, STYLES, get_style
+from spacepaste.lib.pagination import generate_pagination
+from spacepaste.lib.captcha import check_hashed_solution, Captcha
 
 
 class PasteController(object):

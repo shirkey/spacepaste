@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    lodgeit.lib.antispam
-    ~~~~~~~~~~~~~~~~~~~~
+    spacepaste.lib.antispam
+    ~~~~~~~~~~~~~~~~~~~~~~~
 
     Fight stupid spammers.
 

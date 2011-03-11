@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    lodgeit.controllers.static
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    spacepaste.controllers.static
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     Static stuff.
 
@@ -9,11 +9,11 @@
     :license: BSD
 """
 from werkzeug.exceptions import NotFound
-from lodgeit import local
-from lodgeit.i18n import lazy_gettext
-from lodgeit.utils import render_to_response
-from lodgeit.lib.webapi import get_public_methods
-from lodgeit.lib.highlighting import LANGUAGES
+from spacepaste import local
+from spacepaste.i18n import lazy_gettext
+from spacepaste.utils import render_to_response
+from spacepaste.lib.webapi import get_public_methods
+from spacepaste.lib.highlighting import LANGUAGES
 
 
 HELP_PAGES = [

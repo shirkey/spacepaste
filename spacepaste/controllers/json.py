@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 """
-    lodgeit.controllers.json
-    ~~~~~~~~~~~~~~~~~~~~~~~~
+    spacepaste.controllers.json
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     The JSON controller
 
     :copyright: 2008 by Armin Ronacher.
     :license: BSD
 """
-from lodgeit import local
-from lodgeit.lib.webapi import json
-from lodgeit.utils import render_to_response
+from spacepaste import local
+from spacepaste.lib.webapi import json
+from spacepaste.utils import render_to_response
 
 
 class JSONController(object):

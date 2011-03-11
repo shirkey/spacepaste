@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    lodgeit.lib.highlighting
-    ~~~~~~~~~~~~~~~~~~~~~~~~
+    spacepaste.lib.highlighting
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     Highlighting helpers.
 
@@ -18,11 +18,11 @@ from pygments.lexers import get_lexer_by_name, get_lexer_for_filename, \
 from pygments.styles import get_all_styles
 from pygments.formatters import HtmlFormatter
 
-from lodgeit import local
-from lodgeit.i18n import lazy_gettext as _
-from lodgeit.utils import render_template
-from lodgeit.lib.diff import prepare_udiff
-from lodgeit.lib.compilerparser import parse_gcc_messages, \
+from spacepaste import local
+from spacepaste.i18n import lazy_gettext as _
+from spacepaste.utils import render_template
+from spacepaste.lib.diff import prepare_udiff
+from spacepaste.lib.compilerparser import parse_gcc_messages, \
      parse_javac_messages
 
 from werkzeug import escape
@@ -39,7 +39,7 @@ def _get_pygments_lexers(add_empty=True):
     return r
 
 LANGUAGES = _get_pygments_lexers()
-#: Add LodgeIt's special language lexers
+#: Add spacepaste's special language lexers
 #: Or at least ensure those exist.
 LANGUAGES.extend([
     ('csv',              _('CSV')),

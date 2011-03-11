@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    lodgeit.urls
-    ~~~~~~~~~~~~
+    spacepaste.urls
+    ~~~~~~~~~~~~~~~
 
     The URL mapping.
 

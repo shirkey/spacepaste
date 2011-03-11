@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    lodgeit.lib.xmlrpc
-    ~~~~~~~~~~~~~~~~~~
+    spacepaste.lib.xmlrpc
+    ~~~~~~~~~~~~~~~~~~~~~
 
     XMLRPC helper stuff.
 
@@ -12,7 +12,7 @@ import sys
 import re
 from SimpleXMLRPCServer import SimpleXMLRPCDispatcher
 from werkzeug import Response
-from lodgeit import local
+from spacepaste import local
 
 
 _strip_re = re.compile(r'[\x00-\x08\x0B-\x1F]')

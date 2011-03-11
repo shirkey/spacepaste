@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    lodgeit.application
-    ~~~~~~~~~~~~~~~~~~~
+    spacepaste.application
+    ~~~~~~~~~~~~~~~~~~~~~~
 
     the WSGI application
 
@@ -13,16 +13,16 @@ from datetime import datetime, timedelta
 from werkzeug import SharedDataMiddleware, ClosingIterator
 from werkzeug.exceptions import HTTPException, NotFound
 from sqlalchemy import create_engine
-from lodgeit import i18n
-from lodgeit.local import ctx, _local_manager
-from lodgeit.urls import urlmap
-from lodgeit.utils import COOKIE_NAME, Request, jinja_environment
-from lodgeit.database import db
-from lodgeit.models import Paste
-from lodgeit.controllers import get_controller
+from spacepaste import i18n
+from spacepaste.local import ctx, _local_manager
+from spacepaste.urls import urlmap
+from spacepaste.utils import COOKIE_NAME, Request, jinja_environment
+from spacepaste.database import db
+from spacepaste.models import Paste
+from spacepaste.controllers import get_controller
 
 
-class LodgeIt(object):
+class SpacePaste(object):
     """The WSGI Application"""
 
     def __init__(self, dburi, secret_key):
@@ -79,7 +79,7 @@ class LodgeIt(object):
 def make_app(dburi, secret_key, debug=False, shell=False):
     """Apply the used middlewares and create the application."""
     static_path = os.path.join(os.path.dirname(__file__), 'static')
-    app = LodgeIt(dburi, secret_key)
+    app = SpacePaste(dburi, secret_key)
     if debug:
         app.engine.echo = True
     app.bind_to_context()

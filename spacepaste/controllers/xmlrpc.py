@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 """
-    lodgeit.controllers.xmlrpc
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    spacepaste.controllers.xmlrpc
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     The XMLRPC controller
 
     :copyright: 2007-2008 by Armin Ronacher, Georg Brandl, Christopher Grebs.
     :license: BSD
 """
-from lodgeit import local
-from lodgeit.utils import render_to_response
-from lodgeit.lib.webapi import xmlrpc
+from spacepaste import local
+from spacepaste.utils import render_to_response
+from spacepaste.lib.webapi import xmlrpc
 
 
 class XMLRPCController(object):

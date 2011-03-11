@@ -1,15 +1,15 @@
 #-*- coding: utf-8 -*-
 """
-    lodgeit.libs.filterable
-    ~~~~~~~~~~~~~~~~~~~~~~~
+    spacepaste.libs.filterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    Small library that adds filterable support to some parts of lodgeit.
+    Small library that adds filterable support to some parts of spacepaste.
 
     :copyright: 2008 by Christopher Grebs.
     :license: BSD.
 """
-from lodgeit.i18n import _
-from lodgeit.utils import render_template
+from spacepaste.i18n import _
+from spacepaste.utils import render_template
 
 
 ACTIONS = {

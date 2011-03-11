@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-    lodgeit.i18n
-    ~~~~~~~~~~~~
+    spacepaste.i18n
+    ~~~~~~~~~~~~~~~
 
-    i18n tools for LodgeIt!
+    i18n tools for spacepaste!
 
     :copyright: Copyright 2008 by Armin Ronacher, Christopher Grebs.
     :license: GNU GPL.
@@ -12,7 +12,7 @@ import os
 from babel import Locale, dates, UnknownLocaleError
 from babel.support import Translations
 
-from lodgeit import local
+from spacepaste import local
 
 
 _translations = {}

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    lodgeit.lib.json
-    ~~~~~~~~~~~~~~~~
+    spacepaste.lib.json
+    ~~~~~~~~~~~~~~~~~~~
 
     This module implements a simple JSON API.
 
@@ -10,7 +10,7 @@
 """
 from simplejson import dumps, loads
 from werkzeug import Response
-from lodgeit import local
+from spacepaste import local
 
 
 class JSONRequestHandler(object):

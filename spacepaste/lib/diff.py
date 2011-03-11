@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    lodgeit.lib.diff
-    ~~~~~~~~~~~~~~~~
+    spacepaste.lib.diff
+    ~~~~~~~~~~~~~~~~~~~
 
     Render a nice diff between two things.
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    lodgeit.captcha
-    ~~~~~~~~~~~~~~~
+    spacepaste.captcha
+    ~~~~~~~~~~~~~~~~~~
 
     A module that produces image and audio captchas.  Uses some code of
     PyCAPTCHA by Micah Dowty and was originally used in inyoka.
@@ -17,7 +17,7 @@ from os import listdir
 from os.path import abspath, join, dirname, pardir
 from PIL import ImageFont, ImageDraw, Image, ImageChops, ImageColor
 from werkzeug import Response
-from lodgeit import local
+from spacepaste import local
 
 try:
     from hashlib import sha1

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    lodgeit.lib.pagination
-    ~~~~~~~~~~~~~~~~~~~~~~
+    spacepaste.lib.pagination
+    ~~~~~~~~~~~~~~~~~~~~~~~~~
 
     Fancy Pagination.
 
@@ -9,7 +9,7 @@
     :license: BSD
 """
 import math
-from lodgeit.i18n import _
+from spacepaste.i18n import _
 
 
 def generate_pagination(page, per_page, total, link_builder=None,

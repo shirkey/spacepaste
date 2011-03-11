@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    lodgeit.lib.webapi
-    ~~~~~~~~~~~~~~~~~~
+    spacepaste.lib.webapi
+    ~~~~~~~~~~~~~~~~~~~~~
 
     This module implements the web api.
 
@@ -9,11 +9,11 @@
     :license: BSD.
 """
 import inspect
-from lodgeit.models import Paste
-from lodgeit.database import db
-from lodgeit.lib.xmlrpc import XMLRPCRequestHandler
-from lodgeit.lib.json import JSONRequestHandler
-from lodgeit.lib.highlighting import STYLES, LANGUAGES, get_style, \
+from spacepaste.models import Paste
+from spacepaste.database import db
+from spacepaste.lib.xmlrpc import XMLRPCRequestHandler
+from spacepaste.lib.json import JSONRequestHandler
+from spacepaste.lib.highlighting import STYLES, LANGUAGES, get_style, \
      get_language_for
 
 

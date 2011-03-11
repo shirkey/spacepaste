@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-    lodgeit.utils
-    ~~~~~~~~~~~~~
+    spacepaste.utils
+    ~~~~~~~~~~~~~~~~
 
-    Serveral utilities used by LodgeIt.
+    Serveral utilities used by spacepaste.
 
     :copyright: 2008 by Christopher Grebs.
     :license: BSD
