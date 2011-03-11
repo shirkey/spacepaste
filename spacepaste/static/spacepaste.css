@@ -1,0 +1,27 @@
+html {
+    background: #f1f1f1;
+}
+
+body {
+    background: #fff;
+    -moz-box-shadow: 0px 5px 15px #14293C;
+    -webkit-box-shadow: 0px 5px 15px #14293C;
+    box-shadow: 0px 5px 15px #14293C;
+    margin: 1em;
+    padding: 1em;
+}
+
+h1 {
+    border-bottom: .0625em solid #ccc;
+    font: bold 2em Georgia, serif bold;
+    letter-spacing -.0625em;
+    margin: 0 0 .5em 0;
+    padding: 0 0 .5em 0;
+}
+
+.footer {
+    border-top: .0625em solid #ccc;
+    margin: 1em 0 0 0;
+    padding: 1em 0 0 0;
+    text-align: right;
+}

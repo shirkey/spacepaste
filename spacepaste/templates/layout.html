@@ -3,7 +3,8 @@
 <html>
   <head>
     <title>{{ page_title|e }} | spacepaste!</title>
-    <link rel="stylesheet" href="/static/style.css" type="text/css">
+    <link rel="stylesheet" href="/static/reset-min.css" type="text/css">
+    <link rel="stylesheet" href="/static/spacepaste.css" type="text/css">
     <link rel="stylesheet" href="/static/print.css" type="text/css" media="print">
     <script type="text/javascript" src="/static/jquery-1.5.1.min.js"></script>
     <script type="text/javascript" src="/static/jquery.autocomplete.js"></script>
@@ -68,7 +69,15 @@
           </div>
         {% endif -%}
         {% block body %}{% endblock -%}
-        <div class="footer"></div>
+        <div class="footer">
+            Powered by <a href="#">spacepaste</a>.
+            {%- for href, id, caption in [
+              ('/about/', 'about', _('About')),
+              ('/help/', 'help', 'Help')
+            ] %}
+            <a href="{{ href|e }}">{{ caption|e }}</a>.
+            {%- endfor %}
+        </div>
       </div>
     </div>
   </body>
