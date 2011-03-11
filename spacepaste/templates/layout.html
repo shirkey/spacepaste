@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="/static/print.css" type="text/css" media="print">
     <script type="text/javascript" src="/static/jquery-1.5.1.min.js"></script>
     <script type="text/javascript" src="/static/jquery.autocomplete.js"></script>
-    <script type="text/javascript" src="/static/cookie.js"></script>
-    <script type="text/javascript" src="/static/lodgeit.js"></script>
     {%- if css %}
     <style type="text/css">
       {{ css|e }}
@@ -40,35 +38,7 @@
       </ul> #}
       <div class="content">
         <h2>{{ page_title|e }}</h2>
-        {%- if new_replies %}
-          <div class="notification">
-            <h3>{% trans %}Someone Replied To Your Paste{% endtrans %}</h3>
-            {% for paste in new_replies %}
-            <p>{% trans date=paste.pub_date|datetimeformat, parent=paste.parent.paste_id,
-                        paste=paste.paste_id, paste_url=paste.url|e, parent_url=paste.parent.url|e %}
-              on {{ date }} someone replied to your paste 
-              <a href="{{ parent_url }}">#{{ parent }}</a>,
-              in paste <a href="{{ paste_url }}">#{{ paste }}</a>. Click here to
-              <a href="/compare/{{ paste }}/{{ parent }}/">compare
-              those two pastes</a>.{% endtrans %}
-            </p>
-            {% endfor %}
-            <p><a href="javascript:LodgeIt.hideNotification()">{% trans %}hide this notification{% endtrans %}</a></p>
-          </div>
-        {% elif request.first_visit %}
-          <div class="notification">
-            <h3>{% trans %}Welcome On LodgeIt{% endtrans %}</h3>
-            <p>{%- trans -%}
-              Welcome to the spacepaste pastebin. In order to use the notification feature
-              a 31 day cookie with an unique ID was created for you. The lodgeit database
-              does not store any information about you, it's just used for an advanced
-              pastebin experience :-). Read more on the <a href="/about/#privacy">about
-              lodgeit</a> page. Have fun :-){%- endtrans -%}
-            </p>
-            <p><a href="javascript:LodgeIt.hideNotification()">{% trans %}hide this notification{% endtrans %}</a></p>
-          </div>
-        {% endif -%}
-        {% block body %}{% endblock -%}
+       {% block body %}{% endblock -%}
         <div class="footer">
             Powered by <a href="#">spacepaste</a>.
             {%- for href, id, caption in [
