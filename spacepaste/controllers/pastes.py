@@ -28,7 +28,7 @@ class PasteController(object):
         """The 'create a new paste' view."""
         language = local.request.args.get('language', language)
         if language is None:
-            language = 'en'
+            language = 'text'
 
         code = error = ''
         show_captcha = private = False

@@ -177,6 +177,4 @@ var LodgeIt = {
   }
 };
 
-$(document).ready(function() {
-  LodgeIt.init;
-});
+$(document).ready(LodgeIt.init);
