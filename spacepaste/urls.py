@@ -39,7 +39,4 @@ urlmap = Map([
 
     # colorscheme
     Rule('/colorscheme/', endpoint='pastes/set_colorscheme'),
-
-    # language
-    Rule('/language/<lang>/', endpoint='pastes/set_language'),
 ])

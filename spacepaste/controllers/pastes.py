@@ -12,7 +12,7 @@ from werkzeug import redirect, Response
 from werkzeug.exceptions import NotFound
 from spacepaste import local
 from spacepaste.lib import antispam
-from spacepaste.i18n import list_languages as i18n_list_languages, _
+from spacepaste.i18n import _
 from spacepaste.utils import render_to_response
 from spacepaste.models import Paste
 from spacepaste.database import db
@@ -28,7 +28,7 @@ class PasteController(object):
         """The 'create a new paste' view."""
         language = local.request.args.get('language', language)
         if language is None:
-            language = local.request.session.get('language', 'text')
+            language = 'text'
 
         code = error = ''
         show_captcha = private = False
@@ -56,11 +56,10 @@ class PasteController(object):
                                   'CAPTCHA solution was incorrect')
                 show_captcha = True
             if code and language and not error:
-                paste = Paste(code, language, parent, req.user_hash,
+                paste = Paste(code, language, parent, None,
                               'private' in req.form)
                 db.session.add(paste)
                 db.session.commit()
-                local.request.session['language'] = language
                 return redirect(paste.url)
 
         else:
@@ -174,15 +173,6 @@ class PasteController(object):
         if style_name in STYLES:
             resp.set_cookie('style', style_name)
         return resp
-
-    def set_language(self, lang='en'):
-        """Minimal view that sets a different language. Redirects
-        back to the page the user is coming from."""
-        for key, value in i18n_list_languages():
-            if key == lang:
-                local.request.set_language(lang)
-                break
-        return redirect(local.request.headers.get('referer') or '/')
 
     def show_captcha(self):
         """Show a captcha."""
