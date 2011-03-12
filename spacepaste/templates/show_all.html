@@ -12,7 +12,7 @@
   {%- endfor %}
   </ul>
   {% else %}
-  <strong>{% trans %}No pastes found{% endtrans %}</strong>
+  <p class="notice">{% trans %}No pastes found{% endtrans %}</p>
   {% endif %}
   <div class="pagination">
     {{ pagination }}

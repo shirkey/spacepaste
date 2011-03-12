@@ -1,27 +1,105 @@
 html {
-    background: #f1f1f1;
+    background: #ccc;
 }
 
 body {
-    background: #fff;
-    -moz-box-shadow: 0px 5px 15px #14293C;
-    -webkit-box-shadow: 0px 5px 15px #14293C;
-    box-shadow: 0px 5px 15px #14293C;
-    margin: 1em;
-    padding: 1em;
+    background: #f1f1f1;
 }
 
 h1 {
-    border-bottom: .0625em solid #ccc;
-    font: bold 2em Georgia, serif bold;
+    background: #333;
+    border-bottom: .0625em solid #000;
+    color: #fff;
+    font: bold 1em Verdana, sans-serif;
     letter-spacing -.0625em;
     margin: 0 0 .5em 0;
-    padding: 0 0 .5em 0;
+    padding: .25em 1em;
+}
+
+#navigation {
+    float: right;
+    height: 20px;
+}
+
+#navigation li {
+    float: left;
+}
+
+#navigation li a {
+    background: #333;
+    color: #fff;
+    display: block;
+    font: .75em sans-serif;
+    margin: 0 .25em 0 0;
+    padding: .25em;
+    text-decoration: none;
+}
+
+#navigation li a:hover {
+    background: #000;
+}
+
+#content-area {
+    padding: 1em 1em;
 }
 
 .footer {
-    border-top: .0625em solid #ccc;
+    border-top: 1px solid #ccc;
+    font: .75em sans-serif;
     margin: 1em 0 0 0;
     padding: 1em 0 0 0;
     text-align: right;
+}
+
+textarea {
+    font: .85em monospace;
+    height: 30em;
+    width: 80%;
+}
+
+select {
+    font: .75em Verdana, sans-serif;
+    min-width: 10em;
+    width: 15%;
+}
+
+#webpage { display: none }
+
+button {
+    background: #333;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font: .85em Verdana, sans-serif;
+}
+
+button:hover {
+    background: #000;
+}
+
+label {
+    font: .75em Verdana, sans-serif;
+}
+
+p {
+    font: .75em Verdana, sans-serif;
+}
+
+p.notice {
+    font-weight: bold;
+}
+
+.pagination {
+    font: .75em Verdana, sans-serif;
+    margin: 1em 0 0 0;
+}
+
+#paste .linenos {
+    background: #333;
+    color: #fff;
+    padding: 0 5px 0 20px;
+}
+
+#paste td.code {
+    padding-left: 10px;
 }

@@ -3,7 +3,7 @@
 {% set active_page = 'all' %}
 {% block body %}
   <div class="related">
-    <h3><a href="javascript:LodgeIt.toggleRelatedBox()">{% trans %}Paste Details{% endtrans %}</a></h3>
+    <h3>{% trans %}Paste details{% endtrans %}</h3>
     <div class="quick">
       <p><a href="/?reply_to={{ paste.identifier }}">{% trans %}reply{% endtrans %}</a> |
          <a href="/raw/{{ paste.identifier }}/">{% trans %}raw{% endtrans %}</a></p>

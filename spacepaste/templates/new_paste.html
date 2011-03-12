@@ -22,6 +22,8 @@
       <input type="hidden" name="parent" value="{{ parent.identifier }}">
     {%- endif %}
     <textarea name="code" rows="10" cols="80">{{ code|e }}</textarea>
+    <br>
+    <button type="submit">{% trans %}Paste!{% endtrans %}</button>
     <select name="language">
     {%- for key, caption in languages %}
       <option value="{{ key }}"{% if language == key
@@ -29,7 +31,6 @@
     {%- endfor %}
     </select>
     <input type="text" value="" name="webpage" id="webpage">
-    <input type="submit" value="{% trans %}Paste!{% endtrans %}">
     <input type="checkbox" name="private" id="private"{% if private
       %} checked{% endif %}> <label for="private">{% trans
       %}Make this paste a private paste{% endtrans %}</label>
