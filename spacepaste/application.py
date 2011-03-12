@@ -9,14 +9,13 @@
     :license: BSD
 """
 import os
-from datetime import datetime, timedelta
 from werkzeug import SharedDataMiddleware, ClosingIterator
 from werkzeug.exceptions import HTTPException, NotFound
 from sqlalchemy import create_engine
 from spacepaste import i18n
 from spacepaste.local import ctx, _local_manager
 from spacepaste.urls import urlmap
-from spacepaste.utils import COOKIE_NAME, Request, jinja_environment
+from spacepaste.utils import Request, jinja_environment
 from spacepaste.database import db
 from spacepaste.models import Paste
 from spacepaste.controllers import get_controller
@@ -66,11 +65,6 @@ class SpacePaste(object):
             resp = handler()
         except HTTPException, e:
             resp = e.get_response(environ)
-        else:
-            expires = datetime.utcnow() + timedelta(days=31)
-            if request.first_visit or request.session.should_save:
-                request.session.save_cookie(resp, COOKIE_NAME,
-                                            expires=expires)
 
         return ClosingIterator(resp(environ, start_response),
                                self.cleanup_callbacks)

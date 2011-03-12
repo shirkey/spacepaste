@@ -15,7 +15,6 @@ from random import random
 from functools import partial
 
 from werkzeug import Request as RequestBase, Response
-from werkzeug.contrib.securecookie import SecureCookie
 
 from jinja2 import Environment, FileSystemLoader
 
@@ -36,12 +35,6 @@ jinja_environment = Environment(loader=FileSystemLoader(
 
 #: constants
 _word_only = partial(re.compile(r'[^a-zA-Z0-9]').sub, '')
-COOKIE_NAME = u'spacepaste_session'
-
-
-def generate_user_hash():
-    """Generates an more or less unique SHA1 hash."""
-    return sha1('%s|%s' % (random(), time.time())).hexdigest()
 
 
 def generate_paste_hash():
@@ -55,34 +48,17 @@ def generate_paste_hash():
 
 
 class Request(RequestBase):
-    """Subclass of the `Request` object. automatically creates a new
-    `user_hash` and sets `first_visit` to `True` if it's a new user.
-    It also stores the engine and dbsession on it.
-    """
+    """Subclass of the `Request` object. Stores the engine and
+    dbsession on it."""
     charset = 'utf-8'
 
     def __init__(self, environ):
         super(Request, self).__init__(environ)
         self.first_visit = False
-        session = SecureCookie.load_cookie(self, COOKIE_NAME,
-                                           local.application.secret_key)
-        user_hash = session.get('user_hash')
-
-        if not user_hash:
-            session['user_hash'] = generate_user_hash()
-            self.first_visit = True
-        self.user_hash = session['user_hash']
-        self.session = session
 
         # language is limited to english until translations are ready
-        lang = session.get('locale')
-        if lang is None:
-            lang = 'en'
-            #lang = (self.accept_languages.best or 'en').split('-')[0]
+        lang = 'en'
         self.locale = Locale.parse(lang)
-
-    def set_language(self, lang):
-        self.session['locale'] = lang
 
     @property
     def translations(self):

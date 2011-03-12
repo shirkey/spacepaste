@@ -91,20 +91,8 @@ class Paste(db.Model):
         """Get the new replies for the ower of a request and flag them
         as handled.
         """
-        ids = db.session.query(Paste.paste_id) \
-                        .filter(Paste.user_hash == local.request.user_hash)
-
-        paste_list = db.session.query(Paste.paste_id).filter(db.and_(
-            Paste.parent_id.in_(ids),
-            Paste.handled == False,
-            Paste.user_hash != local.request.user_hash,
-        )).order_by(Paste.paste_id.desc()).all()
-
-        to_mark = [p.paste_id for p in paste_list]
-        Paste.query.filter(Paste.paste_id.in_(to_mark)) \
-                   .update(values={'handled': True})
-        db.session.commit()
-        return paste_list
+        # XXX
+        return list()
 
     def _get_private(self):
         return self.private_id is not None
