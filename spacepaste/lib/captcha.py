@@ -15,7 +15,13 @@ import colorsys
 import math
 from os import listdir
 from os.path import abspath, join, dirname, pardir
-from PIL import ImageFont, ImageDraw, Image, ImageChops, ImageColor
+
+# Work around PIL packaging for virtualenvs
+try:
+    from PIL import ImageFont, ImageDraw, Image, ImageChops, ImageColor
+except ImportError:
+    import ImageFont, ImageDraw, Image, ImageChops, ImageColor
+
 from werkzeug import Response
 from spacepaste import local
 
