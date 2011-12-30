@@ -4,6 +4,7 @@ html {
 
 body {
     background: #f1f1f1;
+    margin: 2em;
 }
 
 h1 {
@@ -14,6 +15,19 @@ h1 {
     letter-spacing -.0625em;
     margin: 0 0 .5em 0;
     padding: .25em 1em;
+}
+
+h1 a { 
+    color: #fff;
+    text-decoration: none;
+}
+
+h2, h3 {
+    font: bold .85em Verdana, sans-serif;
+}
+
+h3 {
+    margin: 5px 0 10px 0;
 }
 
 #navigation {
@@ -54,6 +68,7 @@ h1 {
 textarea {
     font: .85em monospace;
     height: 30em;
+    margin: 0 0 5px 0;
     width: 80%;
 }
 
@@ -85,6 +100,16 @@ p {
     font: .75em Verdana, sans-serif;
 }
 
+.content .text ul {
+    margin-left: 15px;
+    font: .75em Verdana, sans-serif;
+}
+
+.content .text ul li {
+    list-style: circle;
+}
+
+
 p.notice {
     font-weight: bold;
 }
@@ -100,6 +125,44 @@ p.notice {
     padding: 0 5px 0 20px;
 }
 
+#paste div.code {
+    background: #fff;
+    padding: 5px;
+}
+
 #paste td.code {
     padding-left: 10px;
+}
+
+#paste div.syntax,
+.paste_list pre.syntax {
+    background: #fff;
+}
+
+.quick {
+    background: #fff;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+a {
+    color: #333;
+}
+
+.paste_list {
+    margin: 10px 0 0 0;
+}
+
+.paste_list li {
+    background: #fff;
+    margin: 0 0 5px 0;
+    padding: 5px;
+}
+
+.paste_list p {
+    margin: 0 0 5px 0;
+}
+
+.syntax {
+    background: #fff;
 }
