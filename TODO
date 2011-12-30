@@ -1,6 +1,9 @@
 SPACEPASTE TODO
 ----------------
 
+  * Remove help and about routes
+  * Change the default paste to private
+  * Remove public listing
   * Remove babel dependency
   * Store pygmentized source code in the database
   * Add removal urls the way imgur.com does them (a private deletion url shown when a paste is completed).

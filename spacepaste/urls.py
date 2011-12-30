@@ -33,9 +33,7 @@ urlmap = Map([
     Rule('/json/', endpoint='json/handle_request'),
 
     # static pages
-    Rule('/about/', endpoint='static/about'),
-    Rule('/help/', endpoint='static/help'),
-    Rule('/help/<topic>/', endpoint='static/help'),
+    Rule('/removal/', endpoint='static/removal'),
 
     # colorscheme
     Rule('/colorscheme/', endpoint='pastes/set_colorscheme'),
