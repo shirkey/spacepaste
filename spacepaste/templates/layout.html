@@ -36,12 +36,7 @@
            {% block body %}{% endblock -%}
             <div class="footer">
                 Powered by <a href="#">spacepaste</a>.
-                {%- for href, id, caption in [
-                  ('/about/', 'about', _('About')),
-                  ('/help/', 'help', 'Help')
-                ] %}
                 <a href="{{ href|e }}">{{ caption|e }}</a>.
-                {%- endfor %}
             </div>
           </div>
       </div>
