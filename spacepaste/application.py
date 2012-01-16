@@ -28,7 +28,7 @@ class SpacePaste(object):
         self.secret_key = secret_key
 
         #: bind metadata, create engine and create all tables
-        self.engine = engine = create_engine(dburi, convert_unicode=True)
+        self.engine = engine = create_engine(dburi, convert_unicode=True, encoding="utf-8", use_native_unicode=False)
         db.metadata.bind = engine
         db.metadata.create_all(engine, [Paste.__table__])
 
