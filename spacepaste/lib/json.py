@@ -8,7 +8,12 @@
     :copyright: 2008 by Armin Ronacher.
     :license: BSD
 """
-from simplejson import dumps, loads
+from __future__ import absolute_import
+
+try:
+    from json import dumps, loads
+except ImportError:
+    from simplejson import dumps, loads
 from werkzeug import Response
 from spacepaste import local
 
